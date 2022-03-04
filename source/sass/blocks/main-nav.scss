@@ -8,7 +8,7 @@
   @media (max-width: $tablet-width) {
     margin-bottom: 230px;
   }
-  @media (min-width: $mobile-width) and (max-width: $tablet-width) {
+  @media (max-width: $mobile-width) {
     margin-bottom: 143px;
     flex-wrap: wrap;
   }
@@ -30,6 +30,7 @@
 }
 
 .main-nav__toggle {
+  display: none;
   cursor: pointer;
   background: $basic-white;
   border: none;
@@ -37,8 +38,8 @@
   height: 1px;
   position: relative;
 
-  @media (min-width: $tablet-width) {
-    display: none;
+  @media (max-width: 767px) {
+    display: block;
   }
 }
 
@@ -67,12 +68,12 @@
   }
 
   &::before {
-    content: "";
+    content: '';
     bottom: 8px;
     left: 0;
   }
   &::after {
-    content: "";
+    content: '';
     bottom: -8px;
     left: 0;
   }
@@ -84,7 +85,7 @@
   top: 0;
 
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     width: 24px;
@@ -100,7 +101,7 @@
 
 .main-nav__menu {
   display: block;
-  @media (min-width: $mobile-width) and (max-width: $tablet-width) {
+  @media (max-width: 767px) {
     padding: 25px;
     display: none;
     min-height: 568px;
@@ -118,14 +119,14 @@
 }
 
 .main-nav--no-js .main-nav__menu {
-  @media (min-width: $mobile-width) and (max-width: $tablet-width) {
+  @media (max-width: $tablet-width) {
     position: static;
   }
 }
 
 .main-nav__menu svg {
   display: none;
-  @media (min-width: $mobile-width) and (max-width: $tablet-width) {
+  @media (max-width: 767px) {
     display: block;
     width: 42px;
     height: 22px;
@@ -147,7 +148,7 @@
     column-gap: 23px;
   }
 
-  @media (min-width: $mobile-width) and (max-width: $tablet-width) {
+  @media (max-width: 767px) {
     flex-direction: column;
     align-items: flex-start;
     row-gap: 28px;
@@ -160,12 +161,12 @@
   font-size: 16px;
   line-height: 20px;
 
-  @media (max-width: $tablet-width) {
+  @media (max-width: $desktop-width) and (min-width: $tablet-width) {
     font-size: 14px;
     line-height: 17px;
   }
 
-  @media (min-width: $mobile-width) and (max-width: $tablet-width) {
+  @media (max-width: 767px) {
     color: $basic-black;
     font-size: 18px;
     line-height: 22px;
