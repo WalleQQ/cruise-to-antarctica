@@ -1,12 +1,13 @@
 .wrapper {
   max-width: $desktop-width;
   margin: 0 auto;
+  padding: 0;
 
-  @media (max-width: $tablet-width) {
+  @media (max-width: 1159px) and (min-width: $tablet-width) {
     padding: 0 45px;
   }
 
-  @media (max-width: $mobile-width) {
+  @media (max-width: 767px) {
     padding: 0 15px;
   }
 }

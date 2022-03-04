@@ -1,0 +1,26 @@
+.footer-menu ul {
+  @include list-zeroing;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 33px;
+
+  @media (max-width: 1159px) and (min-width: $tablet-width) {
+    gap: 23px;
+  }
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+    gap: 23px;
+    align-items: flex-start;
+  }
+}
+
+.footer-menu a {
+  color: $basic-white;
+
+  @media (max-width: 1159px) {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
