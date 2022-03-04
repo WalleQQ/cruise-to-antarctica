@@ -1,0 +1,126 @@
+.avantage {
+  background-image: image-set(
+    url('../img/avantage/avantage-background.jpg') 1x,
+    url('../img/avantage/avantage-background@2x.jpg') 2x,
+    url('../img/avantage/avantage-background.webp') 1x,
+    url('../img/avantage/avantage-background@2x.webp') 2x
+  );
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 120px 0;
+
+  @media (max-width: $tablet-width) {
+    background-image: image-set(
+      url('../img/avantage/avantage-background-tablet.jpg') 1x,
+      url('../img/avantage/avantage-background-tablet@2x.jpg') 2x,
+      url('../img/avantage/avantage-background-tablet.webp') 1x,
+      url('../img/avantage/avantage-background-tablet@2x.webp') 2x
+    );
+    padding: 120px 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    background-image: image-set(
+      url('../img/avantage/avantage-background-mobile.jpg') 1x,
+      url('../img/avantage/avantage-background-mobile@2x.jpg') 2x,
+      url('../img/avantage/avantage-background-mobile.webp') 1x,
+      url('../img/avantage/avantage-background-mobile@2x.webp') 2x
+    );
+    background-position: 50% 0;
+    padding: 65px 0;
+  }
+}
+
+.avantage h2 {
+  font-family: $font-semi-bold;
+  margin: 0 0 60px 0;
+  font-size: 28px;
+  line-height: 150%;
+  text-align: center;
+}
+
+.avantage ul {
+  @include list-zeroing;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+
+  @media (max-width: 1159px) {
+    gap: 30px;
+    justify-content: center;
+  }
+}
+
+.avantage li {
+  background-color: $basic-white;
+  padding: 30px;
+  width: 300px;
+  height: 181px;
+
+  @media (max-width: 1159px) {
+    padding: 25px 16px 25px 20px;
+    width: 170px;
+    height: 260px;
+  }
+
+  @media (max-width: 767px) {
+    width: 100%;
+    height: 200px;
+  }
+}
+
+.avantage li:nth-child(1) svg {
+  width: 27px;
+  height: 32px;
+  margin-bottom: 25px;
+
+  @media (max-width: 1159px) {
+    width: 21px;
+    height: 26px;
+    margin-bottom: 25px;
+  }
+}
+
+.avantage li:nth-child(2) svg {
+  width: 38px;
+  height: 21px;
+  margin-bottom: 31px;
+
+  @media (max-width: 1159px) {
+    width: 33px;
+    height: 19px;
+    margin-bottom: 28px;
+  }
+}
+
+.avantage li:nth-child(3) svg {
+  width: 42px;
+  height: 15px;
+  margin-bottom: 34px;
+
+  @media (max-width: 1159px) {
+    width: 38px;
+    height: 13px;
+    margin-bottom: 31px;
+  }
+}
+
+.avantage h3 {
+  font-family: $font-medium;
+  margin: 0 0 20px 0;
+  font-size: 18px;
+  line-height: 150%;
+
+  @media (max-width: 1159px) {
+    margin: 0 0 5px 0;
+  }
+}
+
+.avantage p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 19.6px;
+  text-align: left;
+}
