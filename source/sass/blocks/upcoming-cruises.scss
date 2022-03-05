@@ -1,0 +1,130 @@
+.upcoming-cruises {
+  padding: 120px 0;
+}
+
+.upcoming-cruises h2 {
+  font-family: $font-semi-bold;
+  margin-bottom: 60px;
+  font-size: 28px;
+  line-height: 150%;
+}
+
+.upcoming-cruises__list {
+  @include list-zeroing;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  @media (max-width: 1159px) {
+    gap: 30px;
+    justify-content: center;
+  }
+}
+
+.upcoming-cruises__item {
+  box-sizing: border-box;
+  position: relative;
+  width: 260px;
+  height: 386px;
+  background: linear-gradient(180deg, rgba(1, 28, 64, 0) 50%, #011c40 100%),
+    url(.jpg);
+
+  @media (max-width: 1159px) {
+    width: 309px;
+    height: 386px;
+  }
+}
+
+.upcoming-cruises__image-container {
+  display: block;
+}
+
+.upcoming-cruises__image-container img {
+  object-fit: cover;
+  width: 260px;
+  height: 386px;
+
+  @media (max-width: 1159px) {
+    width: 309px;
+    height: 386px;
+  }
+}
+
+.upcoming-cruises__item h3 {
+  pointer-events: none;
+  margin: 0;
+  position: absolute;
+  left: 30px;
+  bottom: 30px;
+  font-family: $font-medium;
+  font-size: 18px;
+  line-height: 150%;
+  color: $basic-white;
+}
+
+.upcoming-cruises__content-container {
+  box-sizing: border-box;
+  background-color: $basic-black;
+  height: 100%;
+  width: 100%;
+  padding: 73px 25px 35px 25px;
+  display: none;
+}
+
+.upcoming-cruises__content-container-list {
+  @include list-zeroing;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.upcoming-cruises__content-container-item {
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+.upcoming-cruises__content-container-item h4 {
+  margin: 0;
+  font-family: $font-medium;
+  font-size: 14px;
+  line-height: 140%;
+  color: $basic-white;
+}
+
+.upcoming-cruises__content-container-item p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 140%;
+  color: $basic-grey;
+}
+
+.upcoming-cruises__content-container a {
+  cursor: pointer;
+  font-family: $font-semi-bold;
+  font-size: 14px;
+  line-height: 150%;
+  color: $basic-black;
+  background-color: $basic-white;
+  padding: 14px 46px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  bottom: 0;
+}
+
+.upcoming-cruises__item:hover .upcoming-cruises__image-container {
+  display: none;
+}
+
+.upcoming-cruises__item:hover h3 {
+  top: 35px;
+  left: 25px;
+}
+
+.upcoming-cruises__item:hover .upcoming-cruises__content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
