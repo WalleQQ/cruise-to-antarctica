@@ -3,6 +3,7 @@
 }
 
 .upcoming-cruises h2 {
+  text-align: center;
   font-family: $font-semi-bold;
   margin-bottom: 60px;
   font-size: 28px;
@@ -13,6 +14,7 @@
   @include list-zeroing;
   display: flex;
   align-items: flex-start;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 30px;
 

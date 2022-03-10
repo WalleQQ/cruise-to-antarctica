@@ -49,14 +49,16 @@
 
 .trips__image-container img {
   object-fit: cover;
-  max-width: 560px;
-  max-height: 301px;
+  width: 560px;
+  height: 301px;
 
   @media (max-width: 1159px) {
-    max-height: 264px;
+    height: 264px;
+    width: 324px;
   }
 
   @media (max-width: 767px) {
-    max-height: 186px;
+    height: 186px;
+    width: 290px;
   }
 }

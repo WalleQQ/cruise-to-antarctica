@@ -52,9 +52,9 @@
               <use xlink:href="img/sprite_auto.svg#logo-menu"></use>
             </svg>
             <ul>
-              <li><a href="#">Преимущества </a></li>
+              <li><a href="#avantage">Преимущества </a></li>
               <li><a href="#">Направления</a></li>
-              <li><a href="#">Ближайшие круизы</a></li>
+              <li><a href="#upcoming-cruises">Ближайшие круизы</a></li>
               <li><a href="#">Контакты</a></li>
             </ul>
           </div>
@@ -86,7 +86,7 @@
           </div>
         </div>
       </section>
-      <section class="avantage">
+      <section class="avantage" id="avantage">
         <div class="wrapper">
           <h2>Преимущества</h2>
           <ul>
@@ -125,7 +125,7 @@
           </ul>
         </div>
       </section>
-      <section class="upcoming-cruises">
+      <section class="upcoming-cruises" id="upcoming-cruises">
         <div class="wrapper">
           <h2>Ближайшие круизы</h2>
           <ul class="upcoming-cruises__list">
@@ -384,6 +384,37 @@
               </div>
             </li>
           </ul>
+        </div>
+      </section>
+      <section class="reservation">
+        <div class="wrapper">
+          <div class="reservation__content">
+            <h2>Раннее бронирование</h2>
+            <p>
+              Забронируйте тур за 3-6 месяцев до даты выезда и сэкономьте до 50%
+            </p>
+          </div>
+          <div class="reservation__form-wrapper">
+            <form
+              class="reservation__form"
+              action="https://echo.htmlacademy.ru"
+              method="post"
+            >
+              <p>Оставьте заявку и мы свяжемся с вами в ближайшее время</p>
+              <input type="text" placeholder="Имя" required />
+              <input type="tel" placeholder="Телефон" required />
+              <input type="email" placeholder="Email" required />
+              <input
+                class="checkbox-input visually-hidden"
+                type="checkbox"
+                id="checkbox"
+              />
+              <label class="checkbox-label" for="checkbox">
+                Я согласен на обработку моих персональных данных
+              </label>
+              <input type="submit" value="Оставить заявку" />
+            </form>
+          </div>
         </div>
       </section>
     </main>
