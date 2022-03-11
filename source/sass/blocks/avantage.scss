@@ -8,7 +8,7 @@
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 120px 0;
+  padding: 113px 0;
 
   @media (max-width: $tablet-width) {
     background-image: image-set(
@@ -17,7 +17,7 @@
       url('../img/avantage/avantage-background-tablet.webp') 1x,
       url('../img/avantage/avantage-background-tablet@2x.webp') 2x
     );
-    padding: 120px 0;
+    padding: 90px 0;
   }
 
   @media (max-width: $mobile-width) {
@@ -28,16 +28,25 @@
       url('../img/avantage/avantage-background-mobile@2x.webp') 2x
     );
     background-position: 50% 0;
-    padding: 65px 0;
+    padding: 60px 0;
   }
 }
 
 .avantage h2 {
   font-family: $font-semi-bold;
-  margin: 0 0 60px 0;
+  margin: 0 0 49px 0;
   font-size: 28px;
   line-height: 150%;
   text-align: center;
+
+  @media (max-width: 1159px) {
+    font-size: 26px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 24px;
+    margin: 0 0 28px 0;
+  }
 }
 
 .avantage ul {
@@ -51,16 +60,20 @@
     gap: 30px;
     justify-content: center;
   }
+
+  @media (max-width: 767px) {
+    gap: 25px;
+  }
 }
 
 .avantage li {
   background-color: $basic-white;
   padding: 30px;
   width: 300px;
-  height: 181px;
+  height: 180px;
 
   @media (max-width: 1159px) {
-    padding: 25px 16px 25px 20px;
+    padding: 29px 16px 25px 20px;
     width: 170px;
     height: 260px;
   }
@@ -74,47 +87,58 @@
 .avantage li:nth-child(1) svg {
   width: 27px;
   height: 32px;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
 
   @media (max-width: 1159px) {
     width: 21px;
     height: 26px;
-    margin-bottom: 25px;
+    margin-bottom: 10px;
   }
 }
 
 .avantage li:nth-child(2) svg {
   width: 38px;
   height: 21px;
-  margin-bottom: 31px;
+  margin-bottom: 21px;
 
   @media (max-width: 1159px) {
     width: 33px;
     height: 19px;
-    margin-bottom: 28px;
+    margin-bottom: 18px;
+  }
+
+  @media (max-width: 767px) {
+    margin-bottom: 15px;
   }
 }
 
 .avantage li:nth-child(3) svg {
   width: 42px;
   height: 15px;
-  margin-bottom: 34px;
+  margin-bottom: 27px;
 
   @media (max-width: 1159px) {
     width: 38px;
     height: 13px;
-    margin-bottom: 31px;
+    margin-bottom: 25px;
   }
 }
 
 .avantage h3 {
   font-family: $font-medium;
-  margin: 0 0 20px 0;
+  margin: 0 0 9px 0;
   font-size: 18px;
   line-height: 150%;
+  max-width: 100%;
 
   @media (max-width: 1159px) {
     margin: 0 0 5px 0;
+    max-width: 100%;
+  }
+
+  @media (max-width: 767px) {
+    margin: 0 0 10px 0;
+    max-width: 173px;
   }
 }
 

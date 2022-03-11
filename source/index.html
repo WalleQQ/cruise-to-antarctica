@@ -55,7 +55,7 @@
               <li><a href="#avantage">Преимущества </a></li>
               <li><a href="#">Направления</a></li>
               <li><a href="#upcoming-cruises">Ближайшие круизы</a></li>
-              <li><a href="#">Контакты</a></li>
+              <li><a href="#contacts">Контакты</a></li>
             </ul>
           </div>
         </nav>
@@ -397,27 +397,50 @@
           <div class="reservation__form-wrapper">
             <form
               class="reservation__form"
-              action="https://echo.htmlacademy.ru"
+              action="https://echo.htmlacademy.ru/"
               method="post"
             >
               <p>Оставьте заявку и мы свяжемся с вами в ближайшее время</p>
-              <input type="text" placeholder="Имя" required />
-              <input type="tel" placeholder="Телефон" required />
-              <input type="email" placeholder="Email" required />
+              <input
+                class="reservation__form-name"
+                type="text"
+                placeholder="Имя"
+                required
+              />
+              <input
+                class="reservation__form-tel"
+                type="tel"
+                placeholder="Телефон"
+                minlength="11"
+                maxlength="11"
+                required
+              />
+              <input
+                class="reservation__form-email"
+                type="email"
+                placeholder="Email"
+                required
+              />
               <input
                 class="checkbox-input visually-hidden"
                 type="checkbox"
                 id="checkbox"
+                checked
+                required
               />
               <label class="checkbox-label" for="checkbox">
                 Я согласен на обработку моих персональных данных
               </label>
-              <input type="submit" value="Оставить заявку" />
+              <input
+                class="reservation__form-button"
+                type="submit"
+                value="Оставить заявку"
+              />
             </form>
           </div>
         </div>
       </section>
-      <section class="contacts">
+      <section class="contacts" id="contacts">
         <div class="wrapper">
           <h2 class="visually-hidden">Контакты</h2>
           <div class="contacts__map-wrapper">
@@ -451,10 +474,10 @@
           </div>
           <div class="footer-menu">
             <ul>
-              <li><a href="#">Преимущества </a></li>
+              <li><a href="#avantage">Преимущества </a></li>
               <li><a href="#">Направления</a></li>
-              <li><a href="#">Ближайшие круизы</a></li>
-              <li><a href="#">Контакты</a></li>
+              <li><a href="#upcoming-cruises">Ближайшие круизы</a></li>
+              <li><a href="#contacts">Контакты</a></li>
             </ul>
           </div>
           <div class="footer-social">
@@ -463,20 +486,20 @@
                 <a href="#"
                   ><svg>
                     <use
-                      xlink:href="img/sprite_auto.svg#social-item-1"
+                      xlink:href="img/sprite_auto.svg#social-item-3"
                     ></use></svg
                 ></a>
               </li>
               <li>
                 <a href="#"></a
                 ><svg>
-                  <use xlink:href="img/sprite_auto.svg#social-item-2"></use>
+                  <use xlink:href="img/sprite_auto.svg#social-item-1"></use>
                 </svg>
               </li>
               <li>
                 <a href="#"></a
                 ><svg>
-                  <use xlink:href="img/sprite_auto.svg#social-item-3"></use>
+                  <use xlink:href="img/sprite_auto.svg#social-item-2"></use>
                 </svg>
               </li>
             </ul>
@@ -485,5 +508,6 @@
       </div>
     </footer>
     <script src="js/menu.js"></script>
+    <script src="js/validation.js"></script>
   </body>
 </html>

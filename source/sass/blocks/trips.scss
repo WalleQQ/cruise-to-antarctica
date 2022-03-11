@@ -1,12 +1,12 @@
 .trips {
-  padding: 120px 0;
+  padding: 115px 0;
 
   @media (max-width: 1159px) {
-    padding: 100px 0;
+    padding: 87px 0 53px 0;
   }
 
   @media (max-width: 767px) {
-    padding: 65px 0;
+    padding: 58px 0;
   }
 }
 
@@ -14,7 +14,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 88px;
-  align-items: center;
+  align-items: start;
 
   @media (max-width: 1159px) {
     column-gap: 30px;
@@ -26,15 +26,21 @@
 }
 
 .trips__content h2 {
-  margin: 0 0 40px 0;
+  margin: 57px 0 24px 0;
   font-family: $font-semi-bold;
   font-size: 28px;
   line-height: 150%;
+  max-width: 100%;
 
   @media (max-width: 1159px) {
-    margin: 0 0 30px 0;
+    margin: 0 0 15px 0;
     font-size: 26px;
     line-height: 140%;
+    max-width: 205px;
+  }
+
+  @media (max-width: 767px) {
+    margin: 0 0 10px 0;
   }
 }
 
@@ -42,8 +48,19 @@
   margin: 0;
   line-height: 150%;
 
-  @media (max-width: 767px) {
+  @media (max-width: 1159px) {
     margin: 0 0 40px 0;
+  }
+
+  @media (max-width: 767px) {
+    margin: 0 0 25px 0;
+  }
+}
+
+.trips__image-container {
+  margin-top: 0;
+  @media (max-width: 1159px) {
+    margin-top: 7px;
   }
 }
 

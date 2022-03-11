@@ -8,7 +8,7 @@
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 50px 0;
+  padding: 52px 0;
 
   @media (max-width: 1159px) {
     background-image: image-set(
@@ -17,7 +17,7 @@
       url('../img/reservation/reservation-background-tablet.webp') 1x,
       url('../img/reservation/reservation-background-tablet@2x.webp') 2x
     );
-    padding: 100px 0;
+    padding: 91px 0;
   }
 
   @media (max-width: $mobile-width) {
@@ -27,51 +27,53 @@
       url('../img/reservation/reservation-background-mobile.webp') 1x,
       url('../img/reservation/reservation-background-mobile@2x.webp') 2x
     );
-    padding: 65px 0;
+    padding: 65px 0 73px 0;
   }
 }
 
 .reservation .wrapper {
   display: flex;
-  align-items: center;
-  column-gap: 144px;
+  align-items: flex-start;
+  column-gap: 148px;
 
   @media (max-width: 1159px) {
     flex-direction: column;
     align-items: center;
+    justify-content: center;
   }
 }
 
 .reservation__content {
-  padding-left: 45px;
+  margin-left: 59px;
 
   @media (max-width: 1159px) {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 0;
-    margin: 0 0 60px 0;
+    margin: 0 0 52px 0;
   }
 
   @media (max-width: 767px) {
-    margin: 0 0 40px 0;
+    margin: 0 0 32px 0;
   }
 }
 
 .reservation__content h2 {
-  margin: 0 0 30px 0;
+  margin: 162px 0 7px 0;
   font-family: $font-bold;
   font-size: 40px;
   line-height: 150%;
   text-align: center;
 
   @media (max-width: 1159px) {
-    margin: 0 0 25px 0;
+    margin: 0 0 5px 0;
     font-size: 34px;
     line-height: 150%;
   }
 
   @media (max-width: 767px) {
+    margin: 0 0 12px 0;
     font-size: 24px;
     line-height: 130%;
     max-width: 194px;
@@ -97,36 +99,37 @@
   }
 }
 
-.reservation__form-wrapper {
-  padding-right: 45px;
-
-  @media (max-width: 1159px) {
-    padding: 0;
-  }
-}
-
 .reservation__form {
-  padding: 50px;
+  padding: 45px 50px 50px 50px;
   box-sizing: border-box;
   background-color: $basic-black;
   display: flex;
   flex-direction: column;
   align-items: stretch;
 
+  @media (max-width: 1159px) {
+    padding: 45px 50px 50px 50px;
+  }
+
   @media (max-width: 767px) {
-    padding: 40px 30px;
+    padding: 33px 30px;
   }
 }
 
 .reservation__form p {
-  margin: 0 0 35px 0;
+  margin: 0 0 26px 0;
   max-width: 303px;
   color: $basic-white;
   font-size: 18px;
   line-height: 150%;
 
+  @media (max-width: 1159px) {
+    margin: 0 0 32px 0;
+  }
+
   @media (max-width: 767px) {
     line-height: 140%;
+    text-align: center;
   }
 }
 
@@ -135,7 +138,7 @@
   border: none;
 
   &:not(:last-child) {
-    margin-bottom: 20px;
+    margin-bottom: 23px;
   }
 
   &::placeholder {
@@ -147,6 +150,12 @@
   &[type='submit'] {
     font-size: 14px;
     line-height: 150%;
+  }
+
+  @media (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
   }
 }
 
@@ -175,6 +184,7 @@
   @media (max-width: 767px) {
     max-width: 162px;
     white-space: normal;
+    margin-bottom: 15px;
   }
 }
 

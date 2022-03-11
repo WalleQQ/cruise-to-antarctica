@@ -1,3 +1,13 @@
+.footer-menu {
+  margin-right: 295px;
+  @media (max-width: 1159px) {
+    margin-right: 63px;
+  }
+  @media (max-width: 767px) {
+    margin-right: 0;
+  }
+}
+
 .footer-menu ul {
   @include list-zeroing;
   display: flex;
@@ -11,7 +21,7 @@
 
   @media (max-width: 767px) {
     flex-direction: column;
-    gap: 23px;
+    gap: 12px;
     align-items: flex-start;
   }
 }
