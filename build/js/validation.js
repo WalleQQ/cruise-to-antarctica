@@ -1,7 +1,7 @@
-const sendContactsForm = document.querySelector('.reservation__form');
-const nameInput = sendContactsForm.querySelector('.reservation__form-name');
-const telInput = sendContactsForm.querySelector('.reservation__form-tel');
-const emailInput = sendContactsForm.querySelector('.reservation__form-email');
+const sendContactsForm = document.querySelector('form');
+const nameInput = sendContactsForm.querySelector('input[type=text]');
+const telInput = sendContactsForm.querySelector('input[type=tel]');
+const emailInput = sendContactsForm.querySelector('input[type=email]');
 
 nameInput.addEventListener('input', () => {
   const value = nameInput.value;

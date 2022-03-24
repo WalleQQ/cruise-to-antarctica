@@ -13,7 +13,7 @@
 .trips .wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 88px;
+  column-gap: 39px;
   align-items: start;
 
   @media (max-width: 1159px) {
@@ -40,7 +40,9 @@
   }
 
   @media (max-width: 767px) {
-    margin: 0 0 10px 0;
+    margin: 0 0 15px 0;
+    font-size: 24px;
+    line-height: 140%;
   }
 }
 
@@ -66,16 +68,16 @@
 
 .trips__image-container img {
   object-fit: cover;
-  width: 560px;
-  height: 301px;
+  max-width: 560px;
+  max-height: 301px;
 
   @media (max-width: 1159px) {
-    height: 264px;
-    width: 324px;
+    min-height: 264px;
+    min-width: 324px;
   }
 
   @media (max-width: 767px) {
-    height: 186px;
-    width: 290px;
+    min-height: 186px;
+    min-width: 290px;
   }
 }

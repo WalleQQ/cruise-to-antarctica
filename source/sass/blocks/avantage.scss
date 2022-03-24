@@ -1,4 +1,5 @@
 .avantage {
+  background-color: $basic-black;
   background-image: image-set(
     url('../img/avantage/avantage-background.jpg') 1x,
     url('../img/avantage/avantage-background@2x.jpg') 2x,
@@ -20,7 +21,7 @@
     padding: 90px 0;
   }
 
-  @media (max-width: $mobile-width) {
+  @media (max-width: 767px) {
     background-image: image-set(
       url('../img/avantage/avantage-background-mobile.jpg') 1x,
       url('../img/avantage/avantage-background-mobile@2x.jpg') 2x,
@@ -28,7 +29,7 @@
       url('../img/avantage/avantage-background-mobile@2x.webp') 2x
     );
     background-position: 50% 0;
-    padding: 60px 0;
+    padding: 63px 0;
   }
 }
 
@@ -71,9 +72,10 @@
   padding: 30px;
   width: 300px;
   height: 180px;
+  overflow-y: scroll;
 
   @media (max-width: 1159px) {
-    padding: 29px 16px 25px 20px;
+    padding: 27px 16px 25px 20px;
     width: 170px;
     height: 260px;
   }
@@ -84,7 +86,7 @@
   }
 }
 
-.avantage li:nth-child(1) svg {
+.avantage li svg {
   width: 27px;
   height: 32px;
   margin-bottom: 10px;
@@ -94,21 +96,25 @@
     height: 26px;
     margin-bottom: 10px;
   }
+
+  @media (max-width: 767px) {
+    width: 21px;
+    height: 26px;
+    margin-bottom: 13px;
+  }
 }
 
 .avantage li:nth-child(2) svg {
   width: 38px;
   height: 21px;
   margin-bottom: 21px;
-
   @media (max-width: 1159px) {
     width: 33px;
     height: 19px;
-    margin-bottom: 18px;
+    margin-bottom: 17px;
   }
-
   @media (max-width: 767px) {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
   }
 }
 
@@ -116,11 +122,15 @@
   width: 42px;
   height: 15px;
   margin-bottom: 27px;
-
   @media (max-width: 1159px) {
+    padding-top: 5px;
     width: 38px;
     height: 13px;
-    margin-bottom: 25px;
+    margin-bottom: 17px;
+  }
+  @media (max-width: 767px) {
+    padding-top: 12px;
+    margin-bottom: 20px;
   }
 }
 
@@ -132,12 +142,12 @@
   max-width: 100%;
 
   @media (max-width: 1159px) {
-    margin: 0 0 5px 0;
+    margin: 0 0 8px 0;
     max-width: 100%;
   }
 
   @media (max-width: 767px) {
-    margin: 0 0 10px 0;
+    margin: 0 0 7px 0;
     max-width: 173px;
   }
 }

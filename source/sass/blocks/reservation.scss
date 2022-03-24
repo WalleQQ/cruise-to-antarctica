@@ -1,9 +1,10 @@
 .reservation {
+  background-color: $basic-black;
   background-image: image-set(
     url('../img/reservation/reservation-background.jpg') 1x,
     url('../img/reservation/reservation-background@2x.jpg') 2x,
     url('../img/reservation/reservation-background.webp') 1x,
-    url('../iimg/reservation/reservation-background@2x.webp') 2x
+    url('../img/reservation/reservation-background@2x.webp') 2x
   );
   background-position: 50% 50%;
   background-repeat: no-repeat;
@@ -87,32 +88,37 @@
   line-height: 150%;
 
   @media (max-width: 1159px) {
-    max-width: 350px;
+    max-width: 352px;
     font-size: 18px;
     line-height: 150%;
     text-align: center;
   }
 
   @media (max-width: 767px) {
+    max-width: 260px;
     font-size: 16px;
     line-height: 140%;
   }
 }
 
 form {
+  position: relative;
   padding: 45px 50px 50px 50px;
   box-sizing: border-box;
   background-color: $basic-black;
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  margin-bottom: 0;
 
   @media (max-width: 1159px) {
-    padding: 45px 50px 50px 50px;
+    padding: 41px 50px 51px 50px;
+    margin-bottom: 8px;
   }
 
   @media (max-width: 767px) {
-    padding: 33px 30px;
+    padding: 26px 30px 40px 30px;
+    margin-bottom: 0;
   }
 }
 
@@ -124,21 +130,24 @@ form p {
   line-height: 150%;
 
   @media (max-width: 1159px) {
-    margin: 0 0 32px 0;
+    margin: 0 0 27px 0;
   }
 
   @media (max-width: 767px) {
+    margin: 0 0 21px 0;
     line-height: 140%;
     text-align: center;
+    padding: 8px;
   }
 }
 
 form input {
   padding: 9.5px 16px;
   border: none;
+  border-radius: 0;
 
   &:not(:last-child) {
-    margin-bottom: 23px;
+    margin-bottom: 26px;
   }
 
   &::placeholder {
@@ -147,22 +156,37 @@ form input {
     color: rgba(1, 28, 64, 0.7);
   }
 
+  &[type='email'] {
+    margin-bottom: 21.5px;
+  }
+
   &[type='submit'] {
     font-size: 14px;
     line-height: 150%;
   }
 
+  @media (max-width: 1159px) {
+    padding: 11px 16px;
+
+    &[type='email'] {
+      margin-bottom: 17px;
+    }
+  }
+
   @media (max-width: 767px) {
+    padding: 12px 16px;
     &:not(:last-child) {
-      margin-bottom: 25px;
+      margin-bottom: 21px;
+    }
+    &[type='email'] {
+      margin-bottom: 12px;
     }
   }
 }
 
 form label[for='name'],
 label[for='tel'],
-label[for='email'],
-input[type='checkbox'] {
+label[for='email'] {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -175,7 +199,16 @@ input[type='checkbox'] {
   overflow: hidden;
 }
 
+input[type='checkbox'] {
+  position: absolute;
+  bottom: 100px;
+  left: 55px;
+  z-index: -1;
+  opacity: 0;
+}
+
 form label[for='checkbox'] {
+  cursor: pointer;
   position: relative;
   padding: 5px 0 5px 23px;
   white-space: nowrap;
@@ -197,10 +230,15 @@ form label[for='checkbox'] {
     transform: translateY(-50%);
   }
 
+  @media (max-width: 1159px) {
+    margin-bottom: 26px;
+  }
+
   @media (max-width: 767px) {
-    max-width: 162px;
+    padding: 5px 0 5px 28px;
+    max-width: 157px;
     white-space: normal;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
   }
 }
 
@@ -215,4 +253,8 @@ form input[type='checkbox']:checked + label[for='checkbox'] {
     height: 18px;
     background: url('../img/reservation/checkbox.svg') 50% 50% no-repeat;
   }
+}
+
+form input[type='submit'] {
+  background-color: $basic-white;
 }
