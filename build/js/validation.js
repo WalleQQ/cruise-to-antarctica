@@ -16,12 +16,8 @@ nameInput.addEventListener('input', () => {
 telInput.addEventListener('input', () => {
   const value = telInput.value;
   const telRegExp = /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/g;
-  if (value.length > 11) {
-    telInput.setCustomValidity('Введите не больше 11 цифр');
-  } else if (telRegExp.test(value) === false) {
-    telInput.setCustomValidity('Введите 11 цифр номера');
-  } else if (value.length < 11) {
-    telInput.setCustomValidity('Введите не меньше 11 цифр');
+  if (telRegExp.test(value) === false) {
+    telInput.setCustomValidity('Введите номера телефона');
   } else {
     telInput.setCustomValidity('');
   }
