@@ -26,7 +26,7 @@ gulp.task('css', function () {
     .pipe(csso())
     .pipe(rename('style.min.css'))
     .pipe(sourcemap.write('.'))
-    .pipe(gulp.dest('build/css'))
+    .pipe(gulp.dest('source/css')) //
     .pipe(server.stream());
 });
 
@@ -82,7 +82,7 @@ gulp.task('html', function () {
   return gulp
     .src('source/*.html')
     .pipe(posthtml([include()]))
-    .pipe(gulp.dest('build'));
+    .pipe(gulp.dest('source'));
 });
 
 gulp.task('copy', function () {

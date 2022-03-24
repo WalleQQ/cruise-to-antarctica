@@ -1,7 +1,7 @@
-const sendContactsForm = document.querySelector('.reservation__form');
-const nameInput = sendContactsForm.querySelector('.reservation__form-name');
-const telInput = sendContactsForm.querySelector('.reservation__form-tel');
-const emailInput = sendContactsForm.querySelector('.reservation__form-email');
+const sendContactsForm = document.querySelector('form');
+const nameInput = sendContactsForm.querySelector('input[type=text]');
+const telInput = sendContactsForm.querySelector('input[type=tel]');
+const emailInput = sendContactsForm.querySelector('input[type=email]');
 
 nameInput.addEventListener('input', () => {
   const value = nameInput.value;
@@ -16,12 +16,8 @@ nameInput.addEventListener('input', () => {
 telInput.addEventListener('input', () => {
   const value = telInput.value;
   const telRegExp = /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/g;
-  if (value.length > 11) {
-    telInput.setCustomValidity('Введите не больше 11 цифр');
-  } else if (telRegExp.test(value) === false) {
-    telInput.setCustomValidity('Введите 11 цифр номера');
-  } else if (value.length < 11) {
-    telInput.setCustomValidity('Введите не меньше 11 цифр');
+  if (telRegExp.test(value) === false) {
+    telInput.setCustomValidity('Введите номера телефона');
   } else {
     telInput.setCustomValidity('');
   }

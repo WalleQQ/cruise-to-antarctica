@@ -47,8 +47,7 @@
   position: relative;
   width: 260px;
   height: 386px;
-  background: linear-gradient(180deg, rgba(1, 28, 64, 0) 50%, #011c40 100%),
-    url(.jpg);
+  background: linear-gradient(180deg, rgba(1, 28, 64, 0) 50%, #011c40 100%);
 
   @media (max-width: 1159px) {
     width: 309px;
@@ -61,30 +60,24 @@
   }
 }
 
-.upcoming-cruises__image-container {
-  display: block;
+.upcoming-cruises__content-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
 }
 
-.upcoming-cruises__image-container img {
-  object-fit: cover;
-  width: 260px;
-  height: 386px;
-
-  @media (max-width: 1159px) {
-    width: 309px;
-    height: 386px;
-  }
-
-  @media (max-width: 767px) {
-    width: 270px;
-    height: 386px;
-  }
+.upcoming-cruises__item--isShow img {
+  z-index: -1;
 }
 
 .upcoming-cruises__item h3 {
   pointer-events: none;
   margin: 0;
   position: absolute;
+  z-index: 2;
   left: 30px;
   bottom: 30px;
   font-family: $font-medium;
@@ -98,13 +91,21 @@
   }
 }
 
+.upcoming-cruises__item--isShow h3 {
+  top: 35px;
+  left: 25px;
+}
+
 .upcoming-cruises__content-container {
   box-sizing: border-box;
   background-color: $basic-black;
   height: 100%;
   width: 100%;
   padding: 73px 25px 35px 25px;
-  display: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: scroll;
 }
 
 .upcoming-cruises__content-container-list {
@@ -149,17 +150,11 @@
   bottom: 0;
 }
 
-.upcoming-cruises__item:hover .upcoming-cruises__image-container {
-  display: none;
+.upcoming-cruises__item:hover img {
+  z-index: -1;
 }
 
 .upcoming-cruises__item:hover h3 {
   top: 35px;
   left: 25px;
-}
-
-.upcoming-cruises__item:hover .upcoming-cruises__content-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }

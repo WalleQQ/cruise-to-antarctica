@@ -9,3 +9,8 @@
   align-content: start;
   background-color: $basic-white;
 }
+
+.page-body__isOpenMenu {
+  position: fixed;
+  background: rgba(0, 43, 102, 0.5);
+}
