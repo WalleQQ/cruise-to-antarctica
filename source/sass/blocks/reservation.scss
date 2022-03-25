@@ -256,5 +256,6 @@ form input[type='checkbox']:checked + label[for='checkbox'] {
 }
 
 form input[type='submit'] {
+  user-select: none;
   background-color: $basic-white;
 }

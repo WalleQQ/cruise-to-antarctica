@@ -111,9 +111,10 @@
 }
 
 .main-nav__menu {
+  user-select: none;
   display: block;
   @media (max-width: 767px) {
-    padding: 20px 15px;
+    padding: 27px 15px;
     display: none;
     min-height: 568px;
     height: 100vh;
@@ -123,6 +124,7 @@
     top: -27px;
     right: -15px;
     background-color: $basic-white;
+    overflow-y: scroll;
   }
 }
 

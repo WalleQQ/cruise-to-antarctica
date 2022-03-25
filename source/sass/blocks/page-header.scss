@@ -1,4 +1,5 @@
 .page-header {
+  position: relative;
   background-color: $basic-black;
   background-image: image-set(
     url('../img/header/header-background.jpg') 1x,
@@ -30,6 +31,16 @@
     );
     background-position: 50% 0;
     padding: 20px 0 177px 0;
+  }
+}
+
+.page-header__overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+
+  &--isShow {
+    background: rgba(0, 43, 102, 0.5);
   }
 }
 
